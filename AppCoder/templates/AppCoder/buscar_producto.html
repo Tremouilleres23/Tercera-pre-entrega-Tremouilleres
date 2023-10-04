@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Resultados de Búsqueda</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="consulta">Buscar Producto:</label>
+        <input type="text" id="consulta" name="consulta">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <ul>
+        {% for producto in productos %}
+            <li>
+                <strong>{{ producto.nombre }}</strong> - {{ producto.descripcion }}<br>
+                Categoría: {{ producto.categoria.nombre }}<br>
+                Precio: ${{ producto.precio }}
+            </li>
+        {% empty %}
+            <li>No se encontraron resultados.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'lista_productos' %}">Volver a la Lista de Productos</a>
+{% endblock %}

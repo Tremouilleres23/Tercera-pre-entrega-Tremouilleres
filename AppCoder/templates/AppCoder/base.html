@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de tu Sitio Web</title>
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productos/">Productos</a></li>
+                <li><a href="/crear_producto/">Crear Producto</a></li>
+                
+            </ul>
+        </nav>
+        <h1>Título de tu Sitio Web</h1>
+    </header>
+
+    <main>
+        {% block content %}
+       
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {{ year }} Tú Nombre o Nombre de tu Empresa</p>
+    </footer>
+
+    
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
