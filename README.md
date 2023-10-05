@@ -1,1 +1,3 @@
-# Tercera-pre-entrega-Tremouilleres
+# Tercera-pre-entrega-Tremouilleres:
+
+ Esta app seria una compra de componentes de pc

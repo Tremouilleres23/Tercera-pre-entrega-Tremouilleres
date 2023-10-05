@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from AppCoder.models import Categoria, Producto, Pedido
+from .models import Categoria, Producto, Pedido
 from .forms import CategoriaForm, ProductoForm, PedidoForm
 
 def lista_productos(request):
